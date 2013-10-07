@@ -7,6 +7,17 @@ module News
       get do
         Link.all
       end
+
+      params do
+        requires :title
+        requires :url
+      end
+      post do
+        Link.create!({
+          title: params[:title],
+          url: params[:url]
+        })
+      end
     end
   end
 end
