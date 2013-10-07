@@ -1,6 +1,7 @@
 PemiluNews::Application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
+  mount News::API => '/'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
