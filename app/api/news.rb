@@ -1,6 +1,7 @@
 module News
   class API < Grape::API
     prefix 'api'
+    format :json
 
     resource :links do
       get do
