@@ -68,5 +68,8 @@ module PemiluNews
     # Auto-load API and its subdirectories
     config.paths.add "app/api", glob: "**/*.rb"
     config.autoload_paths += Dir["#{Rails.root}/app/api/*"]
+
+    # Heroku setu
+    config.assets.initialize_on_precompile = false
   end
 end
