@@ -23,6 +23,10 @@ end
 
 gem 'jquery-rails', '< 3.0.0'
 gem 'rails_12factor', group: :production
+gem "rspec-rails", :group => [:development, :test]
+gem 'sqlite3', group: :test
+gem 'factory_girl_rails', group: :test
+gem 'simplecov', :require => false, :group => :test
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
