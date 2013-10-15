@@ -3,6 +3,10 @@ module News
     prefix 'api'
     format :json
 
+    get :foo do
+      error!("Unexpected error", 500)
+    end
+
     resource :links do
       get do
         Link.all

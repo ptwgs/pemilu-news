@@ -12,6 +12,14 @@ describe News::API do
     end
   end
 
+  describe "GET /api/foo" do
+    it "returns error 500" do
+      get "/api/foo"
+
+      expect(response.status).to eq(500)
+    end
+  end
+
   describe "POST /api/links" do
     it "returns the newly created link" do
       link = { title: "Hello world", url: "http://example.com/" }
